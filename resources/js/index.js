@@ -36,7 +36,7 @@ document.addEventListener('alpine:init', () => {
                             'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
                         },
                         credentials: false, // Include cookies if needed for authentication
-                        autoAdd: true, // Automatically add the uploaded image to the Asset Manager
+                        autoAdd: false, // Automatically add the uploaded image to the Asset Manager
                         assets: [], // Preload assets if needed
                     },
                     ...settings
