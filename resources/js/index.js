@@ -10,7 +10,7 @@ document.addEventListener('alpine:init', () => {
             pluginsOpts: pluginsOpts,
             init() {
                 let enabledTools = {};
-                let editorData = this.state.length > 0
+                let editorData = this.state?.length > 0
                         ? JSON.parse(this.state)
                         : {},
                     projectData = editorData?.projectData ?? {};
