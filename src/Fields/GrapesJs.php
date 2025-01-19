@@ -21,6 +21,8 @@ class GrapesJs extends Field
         'grapesjs-tailwind',
     ];
 
+    protected array | Closure $pluginsOpts = [];
+
     protected array | Closure $settings = [];
 
     protected string $htmlData;
@@ -59,6 +61,12 @@ class GrapesJs extends Field
     public function settings(array | Closure $settings): static
     {
         $this->settings = $settings;
+        return $this;
+    }
+
+    public function pluginsOpts(array | Closure $pluginsOpts): static
+    {
+        $this->pluginsOpts = $pluginsOpts;
         return $this;
     }
 

@@ -23,6 +23,7 @@
             readOnly: {{ $isDisabled() ? 'true' : 'false' }},
             tools: @js($getTools()),
             plugins: @js($getPlugins()),
+            pluginsOpts: @js($getPluginsOpts()),
             settings: @js($getSettings()),
             minHeight: @js($getMinHeight())
         })"
