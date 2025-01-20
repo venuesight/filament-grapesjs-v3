@@ -67,12 +67,12 @@ class FilamentGrapesJsServiceProvider extends PackageServiceProvider
         $files = [
             // AlpineComponent::make('filament-grapesjs', __DIR__.'/../resources/dist/components/filament-grapesjs.js'),
 
-            Css::make('grapesjs', __DIR__.'/../resources/dist/css/grapes.min.css'),
-            Css::make('filament-grapesjs', __DIR__.'/../resources/dist/css/filament-grapesjs.css'),
+            Css::make('grapesjs', __DIR__.'/../resources/dist/css/grapes.min.css')->loadedOnRequest(),
+            Css::make('filament-grapesjs', __DIR__.'/../resources/dist/css/filament-grapesjs.css')->loadedOnRequest(),
 
-            Js::make('grapesjs', __DIR__.'/../resources/dist/js/grapes.min.js'),
-            Js::make('filament-grapesjs-tailwindcss', __DIR__.'/../resources/dist/js/grapesjs-tailwind.min.js'),
-            Js::make('filament-grapesjs', __DIR__.'/../resources/dist/js/filament-grapesjs.js'),
+            Js::make('grapesjs', __DIR__.'/../resources/dist/js/grapes.min.js')->loadedOnRequest(),
+            Js::make('filament-grapesjs-tailwindcss', __DIR__.'/../resources/dist/js/grapesjs-tailwind.min.js')->loadedOnRequest(),
+            Js::make('filament-grapesjs', __DIR__.'/../resources/dist/js/filament-grapesjs.js')->loadedOnRequest(),
         ];
 
         foreach (config( 'filament-grapesjs.assets', [] ) as $type => $assets)
